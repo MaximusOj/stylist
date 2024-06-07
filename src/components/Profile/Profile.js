@@ -91,7 +91,7 @@ export default function Profile({ toggleProfile, currentUser, setCurrentUser, us
         setLoginStatus(null)
 
         //save user details
-        const response = await axios.post('http://localhost:3001/users', userData, {
+        const response = await axios.post('https://stylistfinal-bb70481d4105.herokuapp.com/users', userData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

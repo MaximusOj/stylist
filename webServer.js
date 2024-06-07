@@ -5,7 +5,7 @@ const multer = require('multer');
 const path = require('path');
 
 
-// const uri = "mongodb://localhost:27017/stylist";
+
 const uri = process.env.MONGODB_URI;
 
 mongoose.connect(uri)
@@ -235,20 +235,5 @@ app.get('/users', async (req, res) => {
   }
 });
 
-//retrieve specific user
-// app.post('/users/singular', async (req, res) => {
-//     const criteria_one = {'first_name': req.body.first_name}
-//     const criteria_two = {'last_name': req.body.last_name}
-//     const criteria_three = {'secret_key': req.body.secret_key}
-
-//     console.log(req.body)
-//     try {
-//       const user = await User.find({$and: [criteria_one, criteria_two, criteria_three]});
-//       res.json(user);
-//     } catch (err) {
-//       console.error("Error retrieving specified user:", err);
-//       res.status(500).json({ message: "Error retrieving specified user" });
-//     }
-// });
 
 app.listen(3001, () => console.log("Server listening on port 3001!"));

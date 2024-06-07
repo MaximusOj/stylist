@@ -28,9 +28,9 @@ function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, ne
         karmaData.set('prev_karma', prevKarma)
         karmaData.set ('user_id', currentUser._id)
 
-        await axios.post('http://localhost:3001/posts/karma', karmaData, {
+        await axios.post('https://stylistfinal-bb70481d4105.herokuapp.com/posts/karma', karmaData, {
             headers: {
-                'Access-Control-Allow-Origin': 'http://localhost:3000',
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
             }
         })

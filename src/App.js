@@ -76,7 +76,7 @@ function App({currentUser, setCurrentUser}) {
   
         await axios.post('http://localhost:3001/posts/comment', commentData, {
           headers: {
-            'Access-Control-Allow-Origin': 'http://localhost:3000',
+            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
           }
         })
