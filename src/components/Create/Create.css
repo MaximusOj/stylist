@@ -1,0 +1,70 @@
+.new-post-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 20;
+}
+
+.new-post {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    color: aliceblue;
+    padding: 3%;
+    align-items: center;
+    justify-content: center;
+
+    /* From https://css.glass */
+    background: rgba(104, 115, 134, 0.884);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.2px);
+    -webkit-backdrop-filter: blur(10.2px);
+
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    z-index: 29;
+}
+
+.post-page-title {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.button-area {
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.button-instance {
+    flex: 1;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    margin: 5px;
+}
+
+#button-one {
+    background-color: rgb(0, 132, 255);
+}
+
+#button-two {
+    background-color: rgb(201, 66, 21);
+}
+
+
+#notes{
+    height: 5vh;
+}

@@ -1,0 +1,193 @@
+.full-screen-post{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(80, 79, 79, 0.983);
+    z-index: 991;
+}
+
+.inner-div{
+    background-color: rgba(239, 245, 246, 0.892);
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.image-title-etc, .comment-section-fp{
+    flex: 1;
+}
+
+.full-post-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.full-post-user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.full-post-user-name, .full-post-age{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.full-post-age{
+    padding-left: 5px;
+}
+
+.full-post-title, .full-post-event{
+    word-wrap: break-word;
+    padding: 2%;
+}
+
+.full-post-event{
+    text-align: center;
+}
+
+.image-section-div-fp{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    border: 6px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(10, 10, 9);
+}
+
+.post-image-fp{
+    width: 75%;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.upvote-downvote-fp{
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    height: 50px;
+}
+
+.upvote-button-fp, .karma-count-fp, .downvote-button-fp{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.upvote-button-fp, .downvote-button-fp{
+    box-shadow: 1px 2px 5px 3px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.35);
+    -moz-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.35);
+}
+
+.prev-image-fp:hover, .next-image-fp:hover, .upvote-button-fp:hover, .downvote-button-fp:hover{
+    background-color: rgb(189, 194, 197);
+    color: black;
+}
+
+
+.prev-image-fp, .next-image-fp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight:600;
+    font-style: italic;
+    flex: 1;
+    color: rgb(213, 217, 220);
+    background-color: rgba(0, 0, 0, 0.74);
+    writing-mode: vertical-rl;
+    border: 1px solid black;
+    z-index: 4;
+
+    box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.65);
+    -moz-box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.65);
+}
+
+.prev-image-fp{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;   
+}
+.next-image-fp{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.my-wardrobe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    padding: 3%;
+    border-radius: 15px;
+}
+
+.comment-section-fp{
+    padding: 5%;
+    border-left: 1px dotted black;
+
+    @media (max-width: 900px) {
+        border-top: 1px dotted black;
+        border-left: none;
+        margin-top: 10px;
+    }
+}
+
+.close-button-div-fp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid red;
+    width: fit-content;
+    aspect-ratio: 1/1;
+    color: red;
+}
+
+.close-button-outer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100px;
+    aspect-ratio: 3/1;
+    margin-left: 50%;
+    padding: 1%;
+    border-radius: 15px;
+    word-spacing: 5px;
+}
+
+.close-button-outer-div:hover{
+    background-color: aliceblue;
+    color: black;
+    border: 1px solid black;
+}
