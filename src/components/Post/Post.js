@@ -4,6 +4,8 @@ import { useState } from 'react';
 import axios from 'axios';
 
 export default function Post({ setPostView, postData, setCurrentPost, currentUser }) {
+    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com'
+
     const [imageIndex, setImageIndex] = useState(0);
     const [voteState, setVoteState] = useState('none');
     const [timeoutVal, setTimeoutVal] = useState(0)
@@ -16,7 +18,7 @@ export default function Post({ setPostView, postData, setCurrentPost, currentUse
         karmaData.set('prev_karma', prevKarma)
         karmaData.set ('user_id', currentUser._id)
 
-        await axios.post('/posts/karma', karmaData, {
+        await axios.post(`${BACKEND_URL}/posts/karma`, karmaData, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'

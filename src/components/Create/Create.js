@@ -6,6 +6,7 @@ import axios from 'axios';
 
 
 function Create({ toggleNewPost, currentUser, setNewPost}) {
+    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com' 
     //postData is the payload that will be sent to the backend
     const postData = new FormData();
 
@@ -55,7 +56,7 @@ function Create({ toggleNewPost, currentUser, setNewPost}) {
     async function uploadToServer() {
         captureNonImageDetails();
         toggleNewPost(0);
-        await axios.post('/upload-post-details', postData, {
+        await axios.post(`${BACKEND_URL}/upload-post-details`, postData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

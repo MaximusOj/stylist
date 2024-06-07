@@ -9,6 +9,9 @@ import Create from './components/Create/Create';
 
 
 function App({currentUser, setCurrentUser}) {
+
+  const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com' 
+
   let norms = ['No insults and/or hate speech', 'No commenting on body types, appearances, etc.', 'Users must provide feedback to accompany negative ratings of posts from other users', 'Users are only allowed to comment once on a person’s post (option to edit comment available)', 'Users are only allowed to post twice a day', 'Do not compare users to other users or people in real life']
   let list_items = [];
 
@@ -27,7 +30,7 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchPosts() {
     try {
-      const response = await axios.get('/posts')
+      const response = await axios.get(`${BACKEND_URL}/posts`)
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -36,7 +39,7 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchUsers() {
     try {
-      const response = await axios.get('/users')
+      const response = await axios.get(`${BACKEND_URL}/posts`)
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -72,7 +75,7 @@ function App({currentUser, setCurrentUser}) {
           commentData.set('creation_time', timeArray)
         }
   
-        await axios.post('/posts/comment', commentData, {
+        await axios.post(`${BACKEND_URL}/posts/comment`, commentData, {
           headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'

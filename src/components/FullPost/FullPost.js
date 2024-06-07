@@ -4,14 +4,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, newComment, setNewComment }) {
-    // let postData = {}
-    
-    // if (currentPost){
-    //     for (const [key, value] of currentPost){
-    //         postData[key] = value
-    //     }
-    // }
-    
+    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com'
+
     const [imageIndex, setImageIndex] = useState(0);
     const imgArray = currentPost.photos;
     const [voteState, setVoteState] = useState('none');
@@ -28,7 +22,7 @@ function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, ne
         karmaData.set('prev_karma', prevKarma)
         karmaData.set ('user_id', currentUser._id)
 
-        await axios.post('/posts/karma', karmaData, {
+        await axios.post(`${BACKEND_URL}/posts/karma`, karmaData, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'

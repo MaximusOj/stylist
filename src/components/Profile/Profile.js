@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Profile({ toggleProfile, currentUser, setCurrentUser, userList }) {
+    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com'
+
     const [loginStatus, setLoginStatus] = useState(null)
     const handleSaveUser = () => {
         saveNewUser()
@@ -91,7 +93,7 @@ export default function Profile({ toggleProfile, currentUser, setCurrentUser, us
         setLoginStatus(null)
 
         //save user details
-        const response = await axios.post('/users', userData, {
+        const response = await axios.post(`${BACKEND_URL}/users`, userData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
