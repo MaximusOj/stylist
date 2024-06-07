@@ -27,7 +27,7 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchPosts() {
     try {
-      const response = await axios.get('https://stylistfinal-bb70481d4105.herokuapp.com/posts')
+      const response = await axios.get('/posts')
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -36,7 +36,7 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchUsers() {
     try {
-      const response = await axios.get('https://stylistfinal-bb70481d4105.herokuapp.com/users')
+      const response = await axios.get('/users')
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -72,7 +72,7 @@ function App({currentUser, setCurrentUser}) {
           commentData.set('creation_time', timeArray)
         }
   
-        await axios.post('https://stylistfinal-bb70481d4105.herokuapp.com//posts/comment', commentData, {
+        await axios.post('/posts/comment', commentData, {
           headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
