@@ -38,10 +38,10 @@ function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, ne
 
     function upVote() {
         setPrevKarma(currentPost.karma)
-        if (voteState == 'none') {
+        if (voteState === 'none') {
             currentPost.karma = currentPost.karma + 1
             setVoteState('upvote')
-        } else if (voteState == 'downvote') {
+        } else if (voteState === 'downvote') {
             currentPost.karma = currentPost.karma + 2
             setVoteState('upvote')
         } else {
@@ -59,10 +59,10 @@ function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, ne
 
     function downVote() {
         setPrevKarma(currentPost.karma)
-        if (voteState == 'none') {
+        if (voteState === 'none') {
             currentPost.karma = currentPost.karma - 1
             setVoteState('downvote')
-        } else if (voteState == 'downvote') {
+        } else if (voteState === 'downvote') {
             currentPost.karma = currentPost.karma + 1
             setVoteState('none')
         } else {
