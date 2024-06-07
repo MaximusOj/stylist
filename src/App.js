@@ -27,7 +27,7 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchPosts() {
     try {
-      const response = await axios.get('http://localhost:3001/posts')
+      const response = await axios.get('http://stylistfinal-bb70481d4105.herokuapp.com/posts')
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -36,14 +36,12 @@ function App({currentUser, setCurrentUser}) {
 
   async function fetchUsers() {
     try {
-      const response = await axios.get('http://localhost:3001/users')
+      const response = await axios.get('http://stylistfinal-bb70481d4105.herokuapp.com/users')
       return response
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   }
-
-
 
 
   useEffect(() => {
@@ -74,7 +72,7 @@ function App({currentUser, setCurrentUser}) {
           commentData.set('creation_time', timeArray)
         }
   
-        await axios.post('http://localhost:3001/posts/comment', commentData, {
+        await axios.post('http://stylistfinal-bb70481d4105.herokuapp.com//posts/comment', commentData, {
           headers: {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'

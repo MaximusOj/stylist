@@ -55,7 +55,7 @@ function Create({ toggleNewPost, currentUser, setNewPost}) {
     async function uploadToServer() {
         captureNonImageDetails();
         toggleNewPost(0);
-        await axios.post('https://stylistfinal-bb70481d4105.herokuapp.com/upload-post-details', postData, {
+        await axios.post('http://stylistfinal-bb70481d4105.herokuapp.com/upload-post-details', postData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

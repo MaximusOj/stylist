@@ -16,7 +16,7 @@ export default function Post({ setPostView, postData, setCurrentPost, currentUse
         karmaData.set('prev_karma', prevKarma)
         karmaData.set ('user_id', currentUser._id)
 
-        await axios.post('https://stylistfinal-bb70481d4105.herokuapp.com/posts/karma', karmaData, {
+        await axios.post('http://stylistfinal-bb70481d4105.herokuapp.com/posts/karma', karmaData, {
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
