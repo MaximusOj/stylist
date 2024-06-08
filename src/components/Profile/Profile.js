@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Profile({ toggleProfile, currentUser, setCurrentUser, userList }) {
-    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com'
+    const BACKEND_URL = 'https://stylistapp-0fd867af63d5.herokuapp.com'
 
     const [loginStatus, setLoginStatus] = useState(null)
     const handleSaveUser = () => {

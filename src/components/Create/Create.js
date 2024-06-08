@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 function Create({ toggleNewPost, currentUser, setNewPost}) {
-    const BACKEND_URL = 'https://stylistfinal-bb70481d4105.herokuapp.com' 
+    const BACKEND_URL = 'https://stylistapp-0fd867af63d5.herokuapp.com' 
     //postData is the payload that will be sent to the backend
     const postData = new FormData();
 
