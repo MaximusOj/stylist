@@ -17,7 +17,7 @@ function Navbar({ toggleProfile, toggleNewPost, currentUser }) {
 
     return (
         <div className='navbar'>
-            <div className='our-logo'>Stylist</div>
+            <div className='our-logo'>FitCheck</div>
             <div className='profile-and-norms'>
                 {currentUser && <div className='create-post-button' onClick={handleNewPost}>
                     <CreateIcon /> new post

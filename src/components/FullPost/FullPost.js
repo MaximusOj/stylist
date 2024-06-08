@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function FullPost({ toggleFullPost, currentPost, currentUser, setCurrentPost, newComment, setNewComment }) {
-    const BACKEND_URL = 'https://stylistapp-0fd867af63d5.herokuapp.com'
+    const BACKEND_URL = 'http://localhost:3001'
 
     const [imageIndex, setImageIndex] = useState(0);
     const imgArray = currentPost.photos;

@@ -10,7 +10,7 @@ import Create from './components/Create/Create';
 
 function App({currentUser, setCurrentUser}) {
 
-  const BACKEND_URL = 'https://stylistapp-0fd867af63d5.herokuapp.com' 
+  const BACKEND_URL = 'http://localhost:3001'
 
   let norms = ['No insults and/or hate speech', 'No commenting on body types, appearances, etc.', 'Users must provide feedback to accompany negative ratings of posts from other users', 'Users are only allowed to comment once on a person’s post (option to edit comment available)', 'Users are only allowed to post twice a day', 'Do not compare users to other users or people in real life']
   let list_items = [];
