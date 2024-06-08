@@ -21,7 +21,12 @@ app.use(bodyParser.json());
 var cors = require('cors');
 
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://stylistapp-0fd867af63d5.herokuapp.com',
+    'https://stylistapp-0fd867af63d5.herokuapp.com'
+  ],
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
